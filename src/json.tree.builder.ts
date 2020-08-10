@@ -2,15 +2,11 @@ import { validatePath, getInfo } from "./utils/path.utils";
 import { TreeOptions } from "./interfaces/tree.options";
 import { JsonOptions } from "./interfaces/json.options";
 import { defaultTreeOptions, defaultJsonOptions } from "./constants/defaults";
+import { Tree } from "./interfaces/tree";
+
 const dirTree = require("directory-tree");
 
-export interface Tree {
-    name: string;
-    type: string;        
-    children: Array<Tree>;
-}
-
-export default class TreeBuilder {
+export default class JsonTreeBuilder {
 
     private data: any;
 
@@ -52,7 +48,7 @@ export default class TreeBuilder {
             const type = directory.type;
 
             if(this.treeOptions.excludeFiles && type === "file"){
-                
+
             }
 
             state[directory.name] = directory.type === "directory" ? this.jsonOptions?.emptyDirectorySign: this.jsonOptions.fileSign;

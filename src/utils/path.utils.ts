@@ -2,6 +2,7 @@ import fs from "fs";
 import pathUtils from "path";
 
 import { FileStructureType } from "../types/file.structure.types";
+
 export function validatePath(path: string){
     return fs.existsSync(path);
 }
@@ -31,5 +32,4 @@ export function getInfo(path: string){
     catch(ex){
         throw new Error(`Path: ${path} is invalid. Please check the input or provide correct normalization parameters`);
     }
-    
 }
