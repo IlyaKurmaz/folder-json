@@ -1,7 +1,25 @@
 {
   "name": "folder-json",
   "version": "1.0.0",
+  "description": "Folder to JSON converter",
   "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && node build/index.js",
+    "prepare": "yarn run build",
+    "version": "git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:IlyaKurmaz/folder-json.git"
+  },
+  "keywords": [
+    "json",
+    "folder",
+    "file"
+  ],
+  "author": "Illia Kurmaz",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^14.0.27"
