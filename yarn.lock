@@ -11,3 +11,11 @@ directory-tree@^2.2.4:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/directory-tree/-/directory-tree-2.2.4.tgz#6d5bd7d82e48378e256a1e87b678a43c50076e2e"
   integrity sha512-2N43msQptKbi3WMfIs+U09yi6bfyKL+MWyj5VMj8t1F/Tx04bt1cn/EEIU3o1JBltlJk7NQnzOEuTNa/KQvbWA==
+
+folder-json@^1.0.3, folder-json@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/folder-json/-/folder-json-1.0.4.tgz#ca117e93d040d00b9ab4e82c43f1949db0158a1c"
+  integrity sha512-TPcQMen247qDE5Vap8tV5LYGXczx8KPRpPktE7MSAZLDwSnoIrHyg3+++hCytdS+wRAREiZR0rYCADUxTN3yvA==
+  dependencies:
+    directory-tree "^2.2.4"
+    folder-json "^1.0.3"
