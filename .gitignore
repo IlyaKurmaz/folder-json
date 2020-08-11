@@ -1,6 +1,6 @@
 .nyc_output/
 .vscode/
-lib/
+folder-json/
 build/
 coverage/
 node_modules/

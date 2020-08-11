@@ -8,7 +8,7 @@
       "lib": ["es6", "es2015"],
       "types": ["node"],
       "declaration": true,
-      "outDir": "lib",
+      "outDir": "folder-json",
       "rootDir": "src",
       "strict": true,
     },
