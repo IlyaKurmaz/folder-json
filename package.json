@@ -1,6 +1,6 @@
 {
   "name": "folder-json",
-  "version": "1.0.2",
+  "version": "1.0.21",
   "description": "Folder to JSON converter",
   "main": "src/index.js",
   "scripts": {
