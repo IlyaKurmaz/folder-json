@@ -1,6 +1,6 @@
 {
   "name": "folder-json",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Folder to JSON converter",
   "main": "src/index.js",
   "scripts": {
@@ -17,7 +17,8 @@
   "keywords": [
     "json",
     "folder",
-    "file"
+    "file",
+    "convert"
   ],
   "author": "Illia Kurmaz",
   "license": "MIT",
@@ -28,6 +29,6 @@
     "directory-tree": "^2.2.4"
   },
   "files": [
-    "src"
+    "folder-json"
   ]
 }

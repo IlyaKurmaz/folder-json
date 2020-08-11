@@ -10,10 +10,10 @@
       "declaration": true,
       "outDir": "folder-json",
       "rootDir": "src",
-      "strict": true,
+      "strict": true
     },
     "exclude": [
-      "lib",
+      "folder-json",
       "node_modules",
       "src/**/*.spec.ts"
     ],
