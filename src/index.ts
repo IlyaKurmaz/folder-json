@@ -1,1 +1,1 @@
-export * from "./json.tree.builder";
+export { JsonTreeBuilder } from "./json.tree.builder";

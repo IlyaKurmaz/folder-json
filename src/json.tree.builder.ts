@@ -4,7 +4,7 @@ import { Internal } from "./interfaces";
 
 const dirTree = require("directory-tree");
 
-export default class JsonTreeBuilder {
+export class JsonTreeBuilder {
 
     private data: any;
 
