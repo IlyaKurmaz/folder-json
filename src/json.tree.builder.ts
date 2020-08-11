@@ -2,6 +2,7 @@ import { validatePath, getInfo } from "./utils/path.utils";
 import { defaultTreeOptions, defaultJsonOptions } from "./constants/defaults";
 import { TreeOptions, JsonOptions } from "./interfaces";
 import { Tree } from "./interfaces/tree";
+import { NoneFile } from "./constants/synthetic";
 
 const dirTree = require("directory-tree");
 
@@ -22,7 +23,17 @@ export class JsonTreeBuilder {
         const exists = validatePath(this.rootPath);
 
         if(exists){
-            const originTree = dirTree(this.rootPath, { ...this.treeOptions });
+
+            let options: TreeOptions = {};
+
+            if(this.treeOptions.excludeFiles){
+                options = { ...this.treeOptions, excludeFiles: undefined, extensions: NoneFile };
+            }
+            else {
+                options = { ...this.treeOptions, excludeFiles: undefined }
+            }
+
+            const originTree = dirTree(this.rootPath, options);
 
             this.processTreeToJson(originTree);
     
@@ -45,10 +56,6 @@ export class JsonTreeBuilder {
         else {
 
             const type = directory.type;
-
-            if(this.treeOptions.excludeFiles && type === "file"){
-
-            }
 
             state[directory.name] = directory.type === "directory" ? this.jsonOptions?.emptyDirectorySign: this.jsonOptions.fileSign;
         }

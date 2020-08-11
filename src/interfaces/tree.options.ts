@@ -1,5 +1,5 @@
 export interface TreeOptions {
-    extensions?: string;
+    extensions?: RegExp | RegExp[];
     normalizePath?: boolean;
     exclude?: string;
     excludeFiles?: boolean;
