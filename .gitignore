@@ -4,3 +4,4 @@ folder-json/
 build/
 coverage/
 node_modules/
+lib/

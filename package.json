@@ -1,6 +1,6 @@
 {
   "name": "folder-json",
-  "version": "1.0.8",
+  "version": "1.0.13",
   "description": "Folder to JSON converter",
   "main": "src/index.js",
   "scripts": {
@@ -29,6 +29,6 @@
     "directory-tree": "^2.2.4"
   },
   "files": [
-    "folder-json"
+    "lib"
   ]
 }
