@@ -1,6 +1,7 @@
 import { validatePath, getInfo } from "./utils/path.utils";
 import { defaultTreeOptions, defaultJsonOptions } from "./constants/defaults";
-import { Internal } from "./interfaces";
+import { TreeOptions, JsonOptions } from "./interfaces";
+import { Tree } from "./interfaces/tree";
 
 const dirTree = require("directory-tree");
 
@@ -10,8 +11,8 @@ export class JsonTreeBuilder {
 
     constructor(
         private readonly rootPath: string,
-        private readonly treeOptions: Internal.TreeOptions = defaultTreeOptions,
-        private readonly jsonOptions: Internal.JsonOptions = defaultJsonOptions){}
+        private readonly treeOptions: TreeOptions = defaultTreeOptions,
+        private readonly jsonOptions: JsonOptions = defaultJsonOptions){}
 
     get info() {
         return getInfo(this.rootPath);
@@ -32,7 +33,7 @@ export class JsonTreeBuilder {
         }
     }
 
-    private processTreeToJson(directory: Internal.Tree, state: any = {}){        
+    private processTreeToJson(directory: Tree, state: any = {}){        
         state[directory.name] = {};
     
         if(directory.children && directory.children.length > 0){
