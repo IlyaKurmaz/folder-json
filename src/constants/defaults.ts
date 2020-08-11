@@ -1,15 +1,14 @@
-import { TreeOptions } from "../interfaces/tree.options";
 import { None } from "./synthetic";
-import { JsonOptions } from "../interfaces/json.options";
+import { Internal } from "../interfaces";
 
-export const defaultTreeOptions: TreeOptions = {
+export const defaultTreeOptions: Internal.TreeOptions = {
     extensions: None,
     normalizePath: true,
     exclude: None,
     excludeFiles: false
 }
 
-export const defaultJsonOptions: JsonOptions = {
+export const defaultJsonOptions: Internal.JsonOptions = {
     emptyDirectorySign: null,
     fileSign: null
 }
